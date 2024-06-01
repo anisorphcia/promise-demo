@@ -1,0 +1,16 @@
+{
+  "news": [
+    {"id": 1, "title": "title-1", "content": "content-1"},
+    {"id": 2, "title": "title-2", "content": "content-2"},
+    {"id": 3, "title": "title-3", "content": "content-3"}
+  ],
+  "comment": [
+    {"id": 1, "name": "name-1", "newsId": 1},
+    {"id": 2, "name": "name-2", "newsId": 1},
+    {"id": 3, "name": "name-3", "newsId": 1},
+    {"id": 4, "name": "name-4", "newsId": 2},
+    {"id": 5, "name": "name-5", "newsId": 2},
+    {"id": 6, "name": "name-6", "newsId": 3},
+    {"id": 7, "name": "name-7", "newsId": 3}
+  ]
+}

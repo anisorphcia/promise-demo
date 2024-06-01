@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function ajax(url, successCb, errorCb) {
+        setTimeout(() => {
+          let success = url
+          if (success) {
+            successCb()
+          } else {
+            errorCb()
+          }
+        }, 1000)
+      }
+
+      // 对于实际业务来说，如果需要嵌套请求多个接口，那么代码就会变得比较难看
+      ajax(
+        'qq.com',
+        () => {
+          console.log('qq success')
+          // second request
+          ajax(
+            'baidu.com',
+            () => {
+              console.log('baidu success')
+            },
+            () => {
+              console.log('baidu error')
+            }
+          )
+        },
+        () => {
+          console.log('qq error')
+        }
+      )
+    </script>
+  </body>
+</html>
