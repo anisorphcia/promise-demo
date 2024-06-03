@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      async function test() {
+        console.log("ok");
+        return '1'
+      }
+
+      let res = test()
+      console.log(res)
+
+      res.then(data => {
+        console.log('async')
+      })
+    </script>
+  </body>
+</html>
